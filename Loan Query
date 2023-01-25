@@ -1,0 +1,234 @@
+query {
+    community {
+        lender (publicId: "publicId") {
+            id
+            image {
+                hash
+                height
+                id
+                width
+                url (presetSize: default, customSize: "big")
+            }
+            inviteeCount
+            lenderPage {
+                city
+                state
+                country {
+                    name
+                    isoCode
+                    region
+                    ppp
+                    numLoansFundraising
+                    fundsLentInCountry
+                    geocode {
+                        city
+                        state
+                        postalCode
+                        latitude
+                        longitude
+                    }
+                }
+                loanBecause
+                occupation
+                otherInfo
+                url
+                whereabouts
+            }
+            loanCount
+            memberSince
+            name
+            publicId
+            loans (offset: 5, limit: 5) {
+                totalCount
+                values {
+                    activity {
+                        id
+                        name
+                    }
+                    anonymizationLevel
+                    borrowerCount
+                    borrowers {
+                        borrowedAmount
+                        firstName
+                        gender
+                        id
+                        isPrimary
+                        pictured
+                    }
+                    dafEligible
+                    delinquent
+                    description
+                    descriptionInOriginalLanguage
+                    disbursalDate
+                    distributionModel
+                    endorser {
+                        id
+                        inviteeCount
+                        loanCount
+                        memberSince
+                        name
+                        publicId
+                    }
+                    fundraisingDate
+                    gender
+                    geocode {
+                        city
+                        state
+                        postalCode
+                        latitude
+                        longitude
+                    }
+                    hasCurrencyExchangeLossLenders
+                    id
+                    image {
+                        hash
+                        height
+                        id
+                        width
+                        url (presetSize: default, customSize: "large")
+                    }
+                    isMatchable
+                    inPfp
+                    loanAmount
+                    loanFundraisingInfo {
+                        fundedAmount
+                        isExpiringSoon
+                        reservedAmount
+                    }
+                    lenderRepaymentTerm
+                    matcherName
+                    matchingText
+                    name
+                    originalLanguage {
+                        id
+                        isActive
+                        isoCode
+                        name
+                    }
+                    minNoteSize
+                    paidAmount
+                    pfpMinLenders
+                    plannedExpirationDate
+                    previousLoanId
+                    raisedDate
+                    researchScore
+                    repaymentInterval
+                    sector {
+                        id
+                        name
+                    }
+                    status
+                    tags
+                    terms {
+                        currency
+                        currencyFullName
+                        disbursalAmount
+                        disbursalDate
+                        loanAmount
+                        lenderRepaymentTerm
+                        lossLiabilityCurrencyExchange
+                        lossLiabilityNonpayment
+                        flexibleFundraisingEnabled
+                    }
+                    use
+                    userProperties {
+                        favorited
+                        lentTo
+                        subscribed
+                        promoEligible (basketId: "basketId")
+                        amountInBasket (basketId: "basketId")
+                    }
+                    video {
+                        thumbnailImageId
+                        youtubeId
+                    }
+                    whySpecial
+                    comments (offset: 5, limit: 5) {
+                        totalCount
+                    }
+                    lenders (offset: 5, limit: 5) {
+                        totalCount
+                    }
+                    lendingActions (offset: 5, limit: 5) {
+                        totalCount
+                    }
+                    teams (offset: 5, limit: 5) {
+                        totalCount
+                    }
+                    updates (offset: 5, limit: 5) {
+                        totalCount
+                    }
+                }
+            }
+            teams (offset: 5, limit: 5) {
+                totalCount
+                values {
+                    category
+                    createdDate
+                    description
+                    id
+                    lenderCount
+                    lentAmount
+                    loanBecause
+                    loanCount
+                    membershipType
+                    name
+                    teamPublicId
+                    url
+                    whereabouts
+                    loans (offset: 5, limit: 5) {
+                        totalCount
+                    }
+                }
+            }
+        }
+        team (id: 5, teamPublicId: "teamPublicID") {
+            category
+            createdDate
+            description
+            id
+            image {
+                hash
+                height
+                id
+                width
+                url (presetSize: default, customSize: "large")
+            }
+            lenderCount
+            lentAmount
+            loanBecause
+            loanCount
+            membershipType
+            name
+            teamPublicId
+            url
+            whereabouts
+            lenders (offset: 5, limit: 5) {
+                totalCount
+                values {
+                    id
+                    inviteeCount
+                    lenderPage {
+                        city
+                        state
+                        loanBecause
+                        occupation
+                        otherInfo
+                        url
+                        whereabouts
+                    }
+                    loanCount
+                    memberSince
+                    name
+                    publicId
+                }
+            }
+            loans (offset: 5, limit: 5) {
+                totalCount
+            }
+        }
+        teams (offset: 5, limit: 5) {
+            totalCount
+        }
+    }
+}
